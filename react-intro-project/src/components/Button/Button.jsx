@@ -1,9 +1,10 @@
 import "../Button/Button.css"
 
-export default function Button({ children, onClickfromAppJS }) {
-
+export default function Button({ children, onClickfromAppJS, isActive }) {
   return (
-    <button className='button active' onClick={onClickfromAppJS}>
+    <button
+      className={isActive ? "button active" : "button"}
+      onClick={onClickfromAppJS}>
       {children}
     </button>
   )
