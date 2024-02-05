@@ -1,9 +1,16 @@
 import Header from "./components/header"
 import ListItem from "./components/ListItem"
-import { ways } from "./data"
-import Button from "./components/Button"
+import { ways, differences } from "./data"
+import Button from "./components/Button/Button"
+import { useState } from "react"
 
 export default function App() {
+  const [content, setContent] = useState("Нажми на кнопку")
+
+  function handleClick(type) {
+    setContent(type)
+  }
+
   return (
     <div className='App'>
       <Header />
@@ -22,7 +29,15 @@ export default function App() {
         </section>
         <section>
           <h3>Чем React отличается от других</h3>
-          <Button />
+          <Button onClickfromAppJS={() => handleClick("way")}>Подход</Button>
+          <Button onClickfromAppJS={() => handleClick("easy")}>
+            Доступность
+          </Button>
+          <Button onClickfromAppJS={() => handleClick("program")}>
+            Концентрация
+          </Button>
+
+          <p>{differences[content]}</p>
         </section>
       </main>
     </div>
