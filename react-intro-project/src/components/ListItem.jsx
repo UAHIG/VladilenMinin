@@ -1,5 +1,5 @@
 
-export default function WayToTeach(props) {
+export default function ListItem(props) {
   return (
     <li>
     <p>
@@ -7,4 +7,4 @@ export default function WayToTeach(props) {
     </p>
   </li>
   )
-}
+} 
