@@ -2,7 +2,7 @@ import Button from "./Button/Button"
 import { differences } from "../data"
 import { useState } from "react"
 
-export default function TabSection() {
+export default function ButtonSection() {
   const [contentType, setContentType] = useState(null)
 
   function handleClick(type) {

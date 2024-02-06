@@ -1,14 +1,32 @@
-import Header from "./components/header"
+import Header from "./components/Header/header"
 import TeachingSection from "./components/TeachingSection"
-import TabSection from "./components/TabSection"
+import ButtonSection from "./components/ButtonSection"
+import IntroSection from "./components/IntroSection"
+import TabContainer from "./components/TabContainer"
+import FeedbackSection from "./components/FeedbackSection"
+import { useState } from "react"
 
 export default function App() {
+  const [tab, setTab] = useState("main")
+
   return (
-    <div className='App'>
+    <div>
       <Header />
       <main>
-        <TeachingSection />
-        <TabSection />
+        <IntroSection />
+        <TabContainer active={tab} onChange={(current) => setTab(current)} />
+        {tab === "main" && (
+          <>
+            <TeachingSection />
+            <ButtonSection />
+          </>
+        )}
+
+        {tab === "feedback" && (
+          <>
+            <FeedbackSection />
+          </>
+        )}
       </main>
     </div>
   )

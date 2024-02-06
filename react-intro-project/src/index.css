@@ -9,16 +9,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-header {
-  height: 50px;
-  display: flex;
-  padding: 0 2rem;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ccc;
-  background: #fafafa;
-}
-
 main {
   max-width: 850px;
   margin: 0 auto;
@@ -44,4 +34,9 @@ section ul li {
 .content,
 p {
   padding: 1rem 0;
+}
+
+.centred {
+  text-align: center;
+  margin-bottom: 20px;
 }
