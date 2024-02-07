@@ -44,11 +44,18 @@ export default function EffectSection() {
       {laoading && <p>Loading...</p>}
       {!laoading && (
         <>
+          <h3>Фильтр имен</h3>
           <input type='text' className='control' {...input} />
+          <h4>Список</h4>
+
           <ul>
-            {users.filter(user => user.name.toLowerCase().includes(input.value.toLowerCase())).map((user) => (
-              <li key={user.id}>{user.name}</li>
-            ))}
+            {users
+              .filter((user) =>
+                user.name.toLowerCase().includes(input.value.toLowerCase())
+              )
+              .map((user) => (
+                <li key={user.id}>{user.name}</li>
+              ))}
           </ul>
         </>
       )}
