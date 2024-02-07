@@ -19,6 +19,12 @@ export default function TabContainer({ active, onChange }) {
         onClickfromAppJS={() => onChange("feedback")}>
         Обратная связь
       </Button>
+
+      <Button
+        isActive={active === "effect"}
+        onClickfromAppJS={() => onChange("effect")}>
+        Effect
+      </Button>
     </section>
   )
 }
