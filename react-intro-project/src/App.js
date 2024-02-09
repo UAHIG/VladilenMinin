@@ -6,6 +6,7 @@ import TabContainer from "./components/TabContainer"
 import FeedbackSection from "./components/FeedbackSection"
 import { useState } from "react"
 import EffectSection from "./components/EffectSection"
+import ImagesSection from "./components/ImagesSection/ImagesSection"
 
 export default function App() {
   const [tab, setTab] = useState("effect")
@@ -32,6 +33,12 @@ export default function App() {
         {tab === "effect" && (
           <>
             <EffectSection />
+          </>
+        )}
+
+        {tab === "images" && (
+          <>
+            <ImagesSection />
           </>
         )}
       </main>

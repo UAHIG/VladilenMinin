@@ -1,6 +1,6 @@
 .button {
   padding: 0.8rem 2rem;
-  border: none;
+  border: 2px color( rgb(16, 18, 16));
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s;

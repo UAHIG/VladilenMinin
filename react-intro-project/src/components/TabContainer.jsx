@@ -25,6 +25,12 @@ export default function TabContainer({ active, onChange }) {
         onClickfromAppJS={() => onChange("effect")}>
         Effect
       </Button>
+
+      <Button
+        isActive={active === "images"}
+        onClickfromAppJS={() => onChange("images")}>
+        Images
+      </Button>
     </section>
   )
 }
